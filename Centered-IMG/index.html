@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: right;
+        }
+
+        #box-element {
+            display: inline-block;
+            /* Lets position absolute make this element the parent */
+            position: relative;
+            height: 200px;
+            width: 400px;
+            border: 3px black solid;
+            overflow: hidden;
+        }
+
+        #background-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+
+        #foreground-img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box-element">
+        <img id="background-img" src="./slide1-background.jpg">
+        <img id="foreground-img" src="./slide1-foreground.png">
+    </div>
+
+</body>
+
+</html>
