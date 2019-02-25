@@ -3,15 +3,22 @@
     <head>
         <meta charset="utf8">
         <style>
+
+            #item1 { grid-area: menu; background-color: green; }
+            #item2 { grid-area: header; }
+
+
             .container {
                 display: grid;
-                grid-template-columns: auto auto;
+                grid-template-areas:
+                    'menu header header'
+                    'menu auto auto';
+                height: 400px;
             }
 
             .item {
                 background: blue;
                 margin: 0px;
-                height: 200px;
                 border: solid 1px green;
             }
         </style>
@@ -19,15 +26,14 @@
 
     <body>
         <div class="container">
-            <div id="item1" class="item">
-    
-            </div>
-            <div id="item2" class="item">
-    
-            </div>
-            <div id="item2" class="item">
-    
-            </div>
+            <div id="item1" class="item"></div>
+            <div id="item2" class="item"></div>
+            <div id="item3" class="item"></div>
+            <div id="item4" class="item"></div>
+            <div id="item5" class="item"></div>
+            <div id="item6" class="item"></div>
+            <div id="item7" class="item"></div>
+            <div id="item8" class="item"></div>
         </div>
     </body>
 </html>
