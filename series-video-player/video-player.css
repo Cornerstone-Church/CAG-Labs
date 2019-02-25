@@ -12,6 +12,7 @@
 
 #video-player--video {
     position: relative;
+    height: 340px;
 }
 
 #video-player--video .video {
@@ -22,8 +23,6 @@
 }
 
 #video-player--thumbnail {
-    position: absolute;
-    top: 360px;
     width: 780px;
     height: 120px;
 
