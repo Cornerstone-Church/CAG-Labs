@@ -1,0 +1,23 @@
+@keyframes topToBottom {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: 400px;
+    }
+}
+
+#box {
+    position: absolute;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+
+    background: red;
+}
+
+.animation {
+    animation-name: topToBottom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}

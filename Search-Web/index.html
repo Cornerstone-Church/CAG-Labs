@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Search Web</title>
+    <meta charset="utf-8">
+    <style>
+        #results {
+            display: none;
+        }
+
+        a {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="Search" id="searchBar" onkeyup="runSearch()">
+    <div id="results">
+        <a>Cafe Menu</a>
+        <a>Cafe</a>
+        <a>Tyler</a>
+        <a>Chris</a>
+        <a>Eric</a>
+    </div>
+</body>
+
+<script>
+    items = document.querySelectorAll('#results a');
+
+    function runSearch() {
+        searchBar = document.getElementById('searchBar');
+        searchBarResult = searchBar.value.toUpperCase();
+        results = document.getElementById('results');
+
+        if (searchBarResult != "") {
+            results.style.display = "inline";
+            for (i = 0; i < items.length; i++) {
+                item = items[i].innerText;
+                if (item.toUpperCase().indexOf(searchBarResult) > -1) {
+                    items[i].style.display = "";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        } else {
+            results.style.display = "none";
+        }
+    }
+</script>
+
+</html>
