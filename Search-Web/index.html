@@ -34,18 +34,13 @@
         searchBarResult = searchBar.value.toUpperCase();
         results = document.getElementById('results');
 
-        if (searchBarResult != "") {
-            results.style.display = "inline";
-            for (i = 0; i < items.length; i++) {
-                item = items[i].innerText;
-                if (item.toUpperCase().indexOf(searchBarResult) > -1) {
-                    items[i].style.display = "";
-                } else {
-                    items[i].style.display = "none";
-                }
+        for (i = 0; i < items.length; i++) {
+            item = items[i].innerText;
+            if (item.toUpperCase().indexOf(searchBarResult) > -1) {
+                items[i].style.display = "";
+            } else {
+                items[i].style.display = "none";
             }
-        } else {
-            results.style.display = "none";
         }
     }
 </script>
